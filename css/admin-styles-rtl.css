@@ -1,0 +1,54 @@
+/**
+ * Endorse Admin Plugin styles
+ *
+ * @package   Endorse ClassicPress Plugin
+ * @copyright Copyright (C) 2019 Kevin Archibald
+ * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html  GNU Public License GPLv2 or later
+ * @author    Kevin Archibald <kevinsspace.ca/contact/>
+ * Endorse is distributed under the terms of the GNU GPL
+ *
+ * Note at this point rtl admin styles are the same as ltr admin styles.
+ *
+ */
+
+#endorse-custom-meta-box label { cursor: default;}
+.endorse-author-meta           { display: inline-block; width: 340px; margin: 20px 0 0 0; padding: 0; }
+.endorse-author-label          { display: inline-block; width: 150px; margin: 0 0 0 20px; }
+.endorse-author-input          { display: inline-block; width: 150px; margin: 0 0 0 10px; }
+.endorse-email-meta            { display: inline-block; width: 340px; margin: 20px 0 0 0; padding: 0; }
+.endorse-email-label           { display: inline-block; width: 150px; margin: 0 0 0 20px; }
+.endorse-email-input           { display: inline-block; width: 150px; margin: 0 0 0 10px; }
+.endorse-location-meta         { display: inline-block; width: 340px; margin: 20px 0 0 0; padding: 0; }
+.endorse-location-label        { display: inline-block; width: 150px; margin: 0 0 0 20px; }
+.endorse-location-input        { display: inline-block; width: 150px; margin: 0 0 0 10px; }
+.endorse-website-meta          { display: inline-block; width: 340px; margin: 20px 0 0 0; padding: 0; }
+.endorse-website-label         { display: inline-block; width: 150px; margin: 0 0 0 20px; }
+.endorse-website-input         { display: inline-block; width: 150px; margin: 0 0 0 10px; }
+.endorse-order-meta            { display: inline-block; width: 340px; margin: 20px 0 0 0; padding: 0; }
+.endorse-order-label           { display: inline-block; width: 150px; margin: 0 0 0 20px; }
+.endorse-order-input           { display: inline-block; width: 150px; margin: 0 0 0 10px; }
+.endorse-rating-meta           { display: inline-block; width: 340px; margin: 20px 0 0 0; padding: 0; }
+.endorse-rating-label          { display: inline-block; width: 150px; margin: 0 0 0 20px; }
+.endorse-rating-input          { display: inline-block; width: 150px; margin: 0 0 0 10px; }
+.endorse-custom1-meta          { display: inline-block; width: 340px; margin: 20px 0 0 0; padding: 0; }
+.endorse-custom1-label         { display: inline-block; width: 150px; margin: 0 0 0 20px; }
+.endorse-custom1-input         { display: inline-block; width: 150px; margin: 0 0 0 10px; }
+.endorse-custom2-meta          { display: inline-block; width: 340px; margin: 20px 0 0 0; padding: 0; }
+.endorse-custom2-label         { display: inline-block; width: 150px; margin: 0 0 0 20px; }
+.endorse-custom2-input         { display: inline-block; width: 150px; margin: 0 0 0 10px; }
+.endorse-avatar-meta           { display: inline-block; width: 340px; margin: 0; padding: 0 0 20px 0; }
+.endorse-avatar-label          { display: inline-block; width: 150px; margin: -60px 0 0 20px; }
+.endorse-avatar                { display: inline-block; width: 150px; margin: 30px 0 0 10px; }
+.endorse-pic-meta              { display: inline-block; width: 340px; margin: 20px 0 0 0; padding: 0; }
+.endorse-edit-pic-label        { display: inline-block; width: 150px; margin: 0 0 0 20px; }
+.endorse-picture-url           { display: inline-block; width: 150px; margin: 0 0 0 10px; }
+.endorse-upload-button         { width: 100px; margin: 20px 50px 0 20px; }
+.endorse-upload-button:hover   { cursor: pointer; }
+.endorse-edit-pic              { width: 150px; margin: 0; }
+.endorse-edit-pic img          { width: 60px; height: auto; margin: 10px 0 0 10px; }
+/* ----------------- admin display of testimonials --------------------- */
+.type-khatestimonial         { min-width: 800px; margin: 0; padding: 0; }
+th.column-taxonomy-khagroups { width: 100px; margin: 0; padding: 0 5px 0 5px; }
+.fixed .column-date          { width: 100px; margin: 0; padding: 0 5px 0 5px; }
+.column-kha-post-id          { width: 50px; margin: 0; padding: 0 5px 0 5px; text-align: center; }
+.column-kha-content          { width: 200px; margin: 0; padding: 0 5px 0 5px; }

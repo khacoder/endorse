@@ -1,0 +1,139 @@
+/**
+ * Endorse Plugin styles RTL
+ *
+ * @package   Endorse WordPress Plugin
+ * @copyright Copyright (C) 2019 Kevin Archibald
+ * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html  GNU Public License GPLv2 or later
+ * @author    Kevin Archibald <kevinsspace.ca/contact/>
+ * Endorse is distributed under the terms of the GNU GPL
+ *
+ */
+/* =============================================================================== General Styles */
+.endorse-button       { float: right; padding: 5px; border: none; }
+.endorse-button:hover { cursor: pointer; }
+.endorse-clear-fix    { clear: both; }
+/* ==================================================================== Content Input Form Styles */
+.endorse_span_custom3             { display: none; }
+.endorse-content-input-wrap       { width: 100%; float: right; clear: both; margin: 0; padding: 0; }
+.endorse-content-gdpr-approve     { width: 100%; float: right; margin: 0; padding: 0; }
+.endorse-content-gdpr-checkbox    { width: 30px!important; float: right; margin: 5px 0 0 0!important; padding: 0!important; }
+.endorse-content-gdpr-label       { width: calc( 100% - 30px); float: right; }
+.endorse-content-input-title,
+.endorse-content-note             { width: 100%; float: right; margin: 0; padding: 0; text-align: right; }
+.endorse-content-form             { width: 100%; float: right; margin: 0; padding: 0; }
+.endorse-content-input-wrap label { width: 100%; float: right; margin: 10px 0 0 0; padding: 0; }
+.endorse-content-input            { width: calc(100% - 10px)!important; float: right; margin: 5px 0 0 0; padding: 5px; }
+.endorse-content-textarea         { width: calc(100% - 10px); float: right; margin: 5px 0 0 0; padding: 5px; font-family: inherit!important; }
+.endorse-input-rating-wrap        { width: calc(100% - 10px); float: right; margin: 10px 0 0 0; padding: 0; }
+.endorse-input-rating-wrap label  { width: 200px; float: right; margin: 0; padding: 0; }
+.endorse-input-rating-wrap select { width: 75px; float: right; margin: 0 10px 0 0; padding: 5px; border: 1px solid #a9a9a9; }
+.endorse-content-html-allowed     { width: 100%; float: right; margin: 10px 0 0 0; padding: 0; font-size: .825em; }
+.endorse-content-html-allowed i   { background-color: #dddddd; }
+.endorse-content-captcha-wrap     { width: 100%; float: right; margin: 10px 0 0 0; padding: 0; }
+#endorse-content-captcha          { width: 100%; float: right; clear: both; margin: 0; padding: 0; }
+.endorse-required-label           { width: 100%; float: right; margin: 10px 0 0 0; padding: 0; }
+.endorse-content-add-gravatar     { width: 100%; float: right; margin: 10px 0 0 0; padding: 0; }
+.endorse-gravatar-label           { float: right; margin: 0; padding: 0; }
+.endorse-content-add-gravatar a   { display: inline-block; margin: 0 0 0 20px; padding: 0; }
+.endorse-content-gravatar-logo    { margin: 0; padding: 0; }
+/* ===================================================================== Widget Input Form Styles */
+.endorse-widget-form-wrap      { width: 100%; float: right; clear: both; margin: 0; padding: 0; }
+.endorse-widget-form-wrap form { width: 100%; float: right; margin: 0; padding: 0; }
+.endorse-widget-gdpr-approve   { width: 100%; float: right; }
+.endorse-widget-gdpr-checkbox  { width: 30px!important; float: right; margin: 5px 0 0 0!important; padding: 0!important; }
+.endorse-widget-gdpr-label     { width: calc(100% - 30px); float: right; }
+.endorse-widget-input-label    { width: 100%; float: right; clear: both; margin: 5px 0 0 0; padding: 0; }
+.endorse-widget-input          { width: calc(100% - 12px)!important; float: right; clear: both; margin: 10px 0 0 0; padding: 5px; overflow: hidden; }
+.endorse-widget-rating-label   { width: 75px; float: right; clear: both; margin: 10px 0 0 0; padding: 0; }
+.endorse-widget-rating-select  { width: 100%!important; float: right; margin: 10px 0 0 0; padding: 5px; background-color: #ffffff; color:#474747; border: 1px solid #a9a9a9; }
+.endorse-widget-input-textarea { width: calc(100% - 10px); float: right; clear: both; margin: 10px 0 0 0; padding: 5px; font-family: inherit; }
+.endorse-widget-captcha        { width: 90%; float: right; clear: both; margin: 10px 0 0 0; }
+/*.endorse-widget-submit         { margin: 10px 0 0 0; padding: 0; float: right; clear: both; }*/
+.endorse-widget-required-text  { width: 100%; float: right; clear: both; margin: 10px 0 0 0; padding: 0; }
+.endorse-widget-html           { width: 100%; margin: 10px 0 0 0; padding: 0; float: right; clear: both; font-size: 12px; }
+.endorse-widget-use-gravatar   { width: 100%; float: right; clear: both; margin: 10px 0 0 0; padding: 0; }
+.endorse-widget-gravatar-label { float: right; margin: 0 20px 0 0; padding: 0; }
+.endorse-widget-use-gravatar a { float: right; }
+/* ======================================================================= Content Display Styles */
+/* Side Layout */
+.endorse-content-wrap-side                                 { width: 100%; float: right; overflow: hidden; margin: 0 0 15px 0; padding: 0; box-sizing: content-box; }
+.endorse-content-box-side                                  { width: 100%; float: right; clear: both; display: table; table-layout: fixed; margin: 0 0 20px 0; padding: 0; box-sizing: content-box; }
+.endorse-content-side-left                                 { display: table-cell; width: 150px; float: none; vertical-align: top; padding: 20px; margin: 0; box-sizing: content-box; }
+.endorse-content-side-right                                { display: table-cell; width: auto; float: none; vertical-align: top; padding: 20px; margin: 0; box-sizing: content-box; }
+.endorse-content-side-gravatar                             { width: 100%; float: right; text-align: center; }
+.endorse-avatar                                            { float: none; display: inline-block; margin: 0 auto 0 auto; }
+.endorse-content-side-meta                                 { width: 100%; float: right; text-align: center; line-height: 1em; padding: 3px 0 0 0; }
+.endorse-testimonial-author                                { width: 100%; float: right; font-size: 0.875em; font-weight: bold; }
+.endorse-content-side-meta .endorse-location,
+.endorse-content-side-meta .endorse-date,
+.endorse-content-side-meta .endorse-custom1,
+.endorse-content-side-meta .endorse-custom2,
+.endorse-content-side-meta .endorse-website                { width: 100%; float: right; font-size: 0.875em; font-style: italic; }
+.endorse-title-rating-wrap-side                            { width: 100%; float: right; margin: 0; padding: 0; }
+.endorse-testimonial-wrap-side                             { width: 100%; float: right; clear: both; margin: 0; padding: 0; }
+.endorse-title-rating-wrap-side .endorse-testimonial-title { float: right; font-weight: bold; }
+.endorse-title-rating-wrap-side .endorse-css-rating        { float: right; }
+/* CSS stars */
+.endorse-css-rating svg                                    { fill: currentColor; }
+@media only screen and (max-width:600px){
+    .endorse-content-side-left                             { display: block; width: calc(100% - 40px); float: right; padding: 20px 20px 0 20px; }
+    .endorse-content-side-right                            { display: block; width: calc(100% - 40px); float: right; padding: 20px; }
+}
+/* ======================================================================== Content Slider Styles */
+.endorse-content-slider                                                     { width: 100%; float: right; overflow: hidden; text-align: right; }
+.endorse-content-slider:first-child:nth-last-child(1)                       { width: 0%; }
+.endorse-content-slider:first-child:nth-last-child(10)                      { width: 10%; }
+.content-slider-nav                                                         { display: inline-block; position: relative; top: 5px;  margin: 5px 0 5px 7px; height: 12px; border: 1px solid gray;
+                                                                              cursor: pointer; outline: none; color: #666; background-color: #f1f1f1; -webkit-appearance: none; -moz-appearance: none; appearance: none; }
+
+.content-slider-nav:hover                                                   { background-color: gray; }
+.content-slider-nav:checked                                                 { background-color: gray; }
+.content-slider-nav:checked:nth-of-type(1) ~ .endorse-content-slider-inner  { right: 0%; }
+.content-slider-nav:checked:nth-of-type(2) ~ .endorse-content-slider-inner  { right: -100%; }
+.content-slider-nav:checked:nth-of-type(3) ~ .endorse-content-slider-inner  { right: -200%; }
+.content-slider-nav:checked:nth-of-type(4) ~ .endorse-content-slider-inner  { right: -300%; }
+.content-slider-nav:checked:nth-of-type(5) ~ .endorse-content-slider-inner  { right: -400%; }
+.content-slider-nav:checked:nth-of-type(6) ~ .endorse-content-slider-inner  { right: -500%; }
+.content-slider-nav:checked:nth-of-type(7) ~ .endorse-content-slider-inner  { right: -600%; }
+.content-slider-nav:checked:nth-of-type(8) ~ .endorse-content-slider-inner  { right: -700%; }
+.content-slider-nav:checked:nth-of-type(9) ~ .endorse-content-slider-inner  { right: -800%; }
+.content-slider-nav:checked:nth-of-type(10) ~ .endorse-content-slider-inner { right: -900%; }
+.endorse-content-slider-inner                                               { position: relative; top: 0; right: 0; float: right; text-align: right; transition: ease-in-out 1.5s; }
+.endorse-content-slider-box-side                                            { float: right; }
+/* ======================================================================== Widget Display Styles */
+.endorse-widget-wrap-top                                      { float: right; clear: both; width: 100%; padding: 0; margin: 0; box-sizing: content-box; }
+.endorse-widget-box-top                                       { float: right; clear: both; width: 100%; padding: 15px 0 40px 0; margin: 5px 0 15px 0; line-height: 1.25em; border-bottom: 1px groove; }
+.endorse-widget-box-top:last-child                            { border-bottom: none; }
+.endorse-widget-meta-top-wrap                                 { width: 100%; float: right; margin: 5px 0 0 0; padding: 0 0 20px 0; border-bottom: 1px solid rgba(0,0,0,.15); }
+.endorse-widget-gravatar-top                                  { width: 100%; text-align: center; }
+.endorse-widget-meta-top                                      { width: 100%; text-align: center; }
+.endorse-widget-meta-top .endorse-testimonial-author          { font-size: 1.0em; }
+.endorse-widget-meta-top .endorse-location,
+.endorse-widget-meta-top .endorse-date,
+.endorse-widget-meta-top .endorse-custom1,
+.endorse-widget-meta-top .endorse-custom2,
+.endorse-widget-meta-top .endorse-website                     { font-size: .875em; font-style: italic; }
+.endorse-widget-title-rating-wrap                             { width: 100%; float: right; padding: 15px 0 15px 0; text-align: center; border-bottom: 1px solid rgba(0,0,0,.15); }
+.endorse-widget-title-rating-wrap .endorse-testimonial-title  { display: block; width: 100%; font-size: 1em; font-weight: bold; }
+.endorse-widget-title-rating-wrap .endorse-css-rating         { display: block; width: 100%; clear: both; }
+.endorse-widget-testimonial-wrap-top                          { width: 100%; float: right; padding: 10px 0 0 0; text-align: center; line-height: 1.2em!important; }
+.endorse-widget-testimonial-wrap-top > p                      { width: 100%; float: right; padding: 10px 0 0 0; text-align: center; line-height: 1.2em!important; }
+.endorse-widget-testimonial-wrap-top p:first-child            { width: 100%; float: right; padding: 10px 0 0 0; text-align: center; }
+/* ======================================================================== Widget Slider Styles */
+.endorse-widget-slider                                                    { width: 100%; float: right; overflow: hidden; text-align: center; }
+.widget-slider-nav                                                        { display: inline-block; position: relative; top: 5px;  margin: 5px 0 5px 7px; width: 12px; height: 12px; border: 1px solid gray; border-radius: 6px; 
+                                                                            cursor: pointer; outline: none; color: #666; background-color: #f1f1f1; -webkit-appearance: none; -moz-appearance: none; appearance: none; }
+.widget-slider-nav:hover                                                  { background-color: gray; }
+.widget-slider-nav:checked                                                { background-color: gray; }
+.widget-slider-nav:checked:nth-of-type(1) ~ .endorse-widget-slider-inner  { right: 0%; }
+.widget-slider-nav:checked:nth-of-type(2) ~ .endorse-widget-slider-inner  { right: -100%; }
+.widget-slider-nav:checked:nth-of-type(3) ~ .endorse-widget-slider-inner  { right: -200%; }
+.widget-slider-nav:checked:nth-of-type(4) ~ .endorse-widget-slider-inner  { right: -300%; }
+.widget-slider-nav:checked:nth-of-type(5) ~ .endorse-widget-slider-inner  { right: -400%; }
+.widget-slider-nav:checked:nth-of-type(6) ~ .endorse-widget-slider-inner  { right: -500%; }
+.widget-slider-nav:checked:nth-of-type(7) ~ .endorse-widget-slider-inner  { right: -600%; }
+.widget-slider-nav:checked:nth-of-type(8) ~ .endorse-widget-slider-inner  { right: -700%; }
+.widget-slider-nav:checked:nth-of-type(9) ~ .endorse-widget-slider-inner  { right: -800%; }
+.widget-slider-nav:checked:nth-of-type(10) ~ .endorse-widget-slider-inner { right: -900%; }
+.endorse-widget-slider-inner                                              { position: relative; top: 0; right: 0; float: right; text-align: right; transition: ease-in-out 1.5s; }
+.endorse-widget-slider-box-top                                            { float: right; }
