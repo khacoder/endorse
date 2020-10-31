@@ -78,7 +78,6 @@ class EndorseDisplayWidget extends \WP_Widget {
 		<p><?php esc_html_e( 'By : ', 'endorse' ); ?>
 			<select name="<?php echo esc_attr( $this->get_field_name( 'display_widget_by' ) ); ?>">
 				<option value="date" <?php selected( $by, 'date' ); ?>><?php esc_html_e( 'date', 'endorse' ); ?></option>
-				<option value="order" <?php selected( $by, 'order' ); ?>><?php esc_html_e( 'order', 'endorse' ); ?></option>
 				<option value="random" <?php selected( $by, 'random' ); ?>><?php esc_html_e( 'random', 'endorse' ); ?></option>
 			</select> 
 		</p>
