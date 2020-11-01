@@ -315,9 +315,7 @@ function setup_backup_restore_page() {
 		<h3><?php esc_html_e( 'Other Notes/Tips', 'endorse' ); ?></h3>
 		<ol>
 			<li><?php esc_html_e( 'New posts are made with each testimonial, so you may create duplicates.', 'endorse' ); ?></li>
-			<li><?php esc_html_e( 'All testimonials are impoted in Draft Mode and must be Publisded.', 'endorse' ); ?></li>
-			<li><?php esc_html_e( 'If the URL changed, uploaded photos will have to be re-uploaded.', 'endorse' ); ?></li>
-			<li><?php esc_html_e( 'Group names are not imported. You need to setup your groups separately.', 'endorse' ); ?></li>
+			<li><?php esc_html_e( 'Any custom photos are not uploaded and you will have to set that up separately.', 'endorse' ); ?></li>
 		</ol>
 	</div>
 	<?php
@@ -545,7 +543,13 @@ function endorse_import( $file ) {
 				'endorse_meta' => $endorse_meta,
 			),
 		);
-		wp_insert_post( $post_arr );
+		$testimonial_post_id      = wp_insert_post( $post_arr );
+		if ( ! is_wp_error( $testimonial_post_id ) ) {
+			$groups = explode( ',', $testimonial['group'] );
+			foreach ( $groups as $group ) {
+				wp_set_object_terms( $testimonial_post_id, esc_html( $group ), 'khagroups', true );
+			}
+		}
 		$imported++;
 	}
 	return $imported;

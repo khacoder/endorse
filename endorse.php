@@ -106,7 +106,7 @@ function setup_custom_post() {
 		'show_in_menu' => true,
 		'menu_icon'    => 'dashicons-awards',
 		'rewrite'      => array( 'slug' => 'khatestimonial' ),
-		'supports'     => array( 'title', 'editor', 'comments' ),
+		'supports'     => array( 'title', 'editor' ),
 	);
 	register_post_type( 'khatestimonial', $args );
 }
