@@ -23,7 +23,7 @@
  */
 
 // EDIT: Make this unique. Example: YourDevName\YourPluginName;
-namespace CanuckCPBlack\UpdateManager;
+namespace EndorseByKHA\UpdateManager;
 
 // EDIT: URL where Update Manager is installed; with trailing slash!
 const UPDATE_SERVER = 'https://kevinsspace.ca/';
