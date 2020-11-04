@@ -364,44 +364,16 @@ function css_rating( $rating ) {
  * @return $html gravatar insert html
  */
 function insert_gravatar( $image_url, $gravatar_size, $use_gravatars, $email ) {
-	// If uploaded photo use that, else use gravatar if selected and available.
-	// If gravatars are enabled, check for valid avatar.
-	if ( true === $use_gravatars ) {
-		$has_valid_avatar = validate_gravatar( $email );
-	} else {
-		$has_valid_avatar = false;
-	}
-	$html = '';
 	if ( '' !== $image_url ) {
-		$html .= '<span class="endorse-avatar" style="width:' . esc_attr( $gravatar_size ) . 'px; height:auto;" ><img class="avatar" src="' . esc_url( $image_url ) . '" alt="Author Picture" /></span>';
-	} elseif ( true === $use_gravatars && true === $has_valid_avatar ) {
-		$size        = $gravatar_size;
-		$avatar_html = get_avatar( $email, $size );
-		$html       .= '<span class="endorse-avatar" style="width:' . esc_attr( $gravatar_size ) . 'px; height:auto;" >' . $avatar_html . '</span>';
+		$html = '<span class="endorse-avatar" style="width:' . esc_attr( $gravatar_size ) . 'px; height:auto;" ><img class="avatar" src="' . esc_url( $image_url ) . '" alt="Author Picture" /></span>';
+	} elseif ( true === $use_gravatars ) {
+		$size           = $gravatar_size;
+		$integer        = rand( 1, 6 );// phpcs:ignore
+		$default_avatar = plugin_dir_url( __DIR__ ) . 'images/mystery' . $integer . '.jpg';
+		$avatar_html    = get_avatar( $email, $size, $default_avatar, '', array( 'force_display' => true ) );
+		$html           = '<span class="endorse-avatar" style="width:' . esc_attr( $gravatar_size ) . 'px; height:auto;" >' . $avatar_html . '</span>';
 	}
 	return $html;
-}
-
-/**
- * Test if gravatar exists for a given email
- *
- * Source: http://codex.wordpress.org/Using_Gravatars.
- *
- * @param string $email is the email to use for the gravatar check.
- *
- * @return boolean $has_valid_avatar
- */
-function validate_gravatar( $email ) {
-	// Craft a potential url and test its headers.
-	$hash    = md5( strtolower( trim( $email ) ) );
-	$uri     = 'http://www.gravatar.com/avatar/' . $hash . '?d=404';
-	$headers = @get_headers( $uri ); // phpcs:ignore
-	if ( ! preg_match( "|200|", $headers[0] ) ) { // phpcs:ignore
-		$has_valid_avatar = false;
-	} else {
-		$has_valid_avatar = true;
-	}
-	return $has_valid_avatar;
 }
 
 /**
