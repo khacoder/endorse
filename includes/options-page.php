@@ -3,8 +3,8 @@
  * Endorse Options
  * This file sets up the options for the plugin.
  *
- * @package   Endorse WordPress Plugin
- * @copyright Copyright (C) 2019, Kevin Archibald
+ * @package   Endorse ClassicPress Plugin
+ * @copyright Copyright (C) 2020, Kevin Archibald
  * @license   GPLv2 or later http://www.gnu.org/licenses/quick-guide-gplv2.html
  * @author    kevinhaig <kevinsspace.ca/contact/>
  * Endorse is distributed under the terms of the GNU GPL.

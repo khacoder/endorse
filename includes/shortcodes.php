@@ -3,8 +3,8 @@
  * Endorse Options
  * This file contains the shortcodes for the plugin.
  *
- * @package   Endorse WordPress Plugin
- * @copyright Copyright (C) 2019, Kevin Archibald
+ * @package   Endorse ClassicPress Plugin
+ * @copyright Copyright (C) 2020, Kevin Archibald
  * @license   GPLv2 or later http://www.gnu.org/licenses/quick-guide-gplv2.html
  * @author    kevinhaig <kevinsspace.ca/contact/>
  *
@@ -358,7 +358,7 @@ function input_content_form( $atts ) {
 				// Sanitize first.
 				if ( ! empty( $_POST['content_testimonial'] ) ) {
 					$sanitize_testimonial = wp_kses( wp_unslash( $_POST['content_testimonial'] ), $allowed_html );
-					// Add WordPress Smiley support.
+					// Add ClassicPress Smiley support.
 					$fix_emoticons = convert_smilies( $sanitize_testimonial );
 					// If emoji present convert to html entities.
 					$testimonial = wp_encode_emoji( $fix_emoticons );

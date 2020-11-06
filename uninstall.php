@@ -2,10 +2,10 @@
 /**
  * This is uninstall.php for the plugin Endorse
  *
- * @package   Endorse WordPress Plugin
+ * @package   Endorse ClassicPress Plugin
  * @copyright Copyright (C) 2020 Kevin Archibald
  * @license   http://www.gnu.org/licenses/quick-guide-gplv3.html  GNU Public License
- * @author    Kevin Archibald <www.kevinsspace.ca/contact/>
+ * @author    Kevin Archibald <https://kevinsspace.ca/contact/>
  * Testimonial Basics is distributed under the terms of the GNU GPL
  */
 
@@ -13,7 +13,7 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	die();
 }
-// If uninstall not called from WordPress exit this function.
+// If uninstall not called from ClassicPress exit this function.
 if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 	die();
 }

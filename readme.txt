@@ -4,7 +4,7 @@ Donate link: http://kevinsspace.ca/endorse-classicpress-plugin/
 Tags: testimonials,ratings,reviews
 Requires at least: 5.3
 Tested up to: 5.5
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 
@@ -29,7 +29,7 @@ Endorse is an awesome full featured plugin for managing testimonials on your sit
 * optional GDPR link on testimonials to allow users to request removal of a testimonial
 
 == Upgrade Notice ==
-* Version 1.0.1
+* Version 1.0.2
 * added readme.txt
 
 == Installation ==

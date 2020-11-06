@@ -3,15 +3,15 @@
  * Plugin Name: Endorse Slider Widget
  * Plugin URI: http://kevinsspace.ca/testimonial-basics-wordpress-plugin/
  * Description: A plugin to display testimonials in a widget
- * Version: 1.0.1
+ * Version: 1.0.2
  * Author: Kevin Archibald
  * Author URI: http://kevinsspace.ca/
  * License: GPLv2 or later
  *
- * @package   Endorse WordPress Plugin
+ * @package   Endorse ClassicPress Plugin
  * @copyright Copyright (C) 2017 Kevin Archibald
  * @license   http://www.gnu.org/licenses/quick-guide-gplv3.html  GNU Public License
- * @author    Kevin Archibald <www.kevinsspace.ca/contact/>
+ * @author    Kevin Archibald <https://kevinsspace.ca/contact/>
  * Testimonial Basics is distributed under the terms of the GNU GPL
  */
 

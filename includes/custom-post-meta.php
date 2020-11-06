@@ -2,10 +2,10 @@
 /**
  * This file the additional meta (data) Endorse testimonials
  *
- * @package     Endorse WordPress Plugin
+ * @package     Endorse ClassicPress Plugin
  * @copyright   Copyright (C) 2017 Kevin Archibald, GPLv2 or later
  * @license     http://www.gnu.org/licenses/gpl-2.0.html
- * @author      Kevin Archibald <www.kevinsspace.ca/contact/>
+ * @author      Kevin Archibald <https://kevinsspace.ca/contact/>
  * Testimonial Basics is distributed under the terms of the GNU GPL
  */
 
@@ -176,7 +176,7 @@ function show_post_custom_meta_box() {
 	<!-- **************** Gravatar ************************************************************** -->
 	<span class="endorse-avatar-meta">
 		<label class="endorse-avatar-label"><?php esc_html_e( 'Gravatar/Image: ', 'endorse' ); ?></label>
-		<span class="endorse-avatar"><?php echo get_avatar( $meta[0]['email'], $size = '60' ); ?></span>
+		<span class="endorse-avatar"><?php echo get_avatar( $meta[0]['email'], '60', '', '', array( 'force_display' => true ) ); ?></span>
 	</span>
 	<!-- **************** Image ************************************************************** -->
 	<span class="endorse-pic-meta">
@@ -199,7 +199,7 @@ function show_post_custom_meta_box() {
 /**
  * Save the data.
  *
- * This functon takes the meta data and saves it to the WordPress Database.
+ * This functon takes the meta data and saves it to the ClassicPress Database.
  *
  * @since 0.0.1
  * @param string $post_id id the post id.

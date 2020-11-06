@@ -2,6 +2,11 @@
                  Endorse ClassicPress Plugin Change Log
 ==========================================================================================
 
+Version 1.0.2
+-----------------------------------
+* update headers
+* remove doc-ready.js as it was not being used
+
 Version 1.0.1
 -----------------------------------
 * add readme.txt and changelog.txt

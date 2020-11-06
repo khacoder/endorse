@@ -3,15 +3,15 @@
  * Plugin Name: Endorse Input Widget
  * Plugin URI: http://kevinsspace.ca/endorse-plugin/
  * Description: A plugin to input a testimonial.
- * Version: 1.0.0
+ * Version: 1.0.2
  * Author: Kevin Archibald
  * Author URI: http://kevinsspace.ca/
  * License: GPLv2 or later
  *
- * @package   Endorse WordPress Plugin
+ * @package   Endorse ClassicPress Plugin
  * @copyright Copyright (C) 2018 Kevin Archibald
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
- * @author    Kevin Archibald <www.kevinsspace.ca/contact/>
+ * @author    Kevin Archibald <https://kevinsspace.ca/contact/>
  * Endorse is distributed under the terms of the GNU GPL
  */
 
@@ -437,7 +437,7 @@ class EndorseInputWidget extends \WP_Widget {
 					// Sanitize first.
 					if ( ! empty( $_POST['widget_testimonial'] ) ) {
 						$sanitize_testimonial = wp_kses( wp_unslash( $_POST['widget_testimonial'] ), $allowed_html );
-						// Add WordPress Smiley support.
+						// Add ClassicPress Smiley support.
 						$fix_emoticons = convert_smilies( $sanitize_testimonial );
 						// If emoji present convert to html entities.
 						$widget_testimonial = wp_encode_emoji( $fix_emoticons );

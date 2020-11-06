@@ -3,15 +3,15 @@
  * Plugin Name: Endorse Display Widget
  * Plugin URI: https://kevinsspace.ca/endorse-classicpress-plugin/
  * Description: A plugin to display testimonials in a widget.
- * Version: 1.0.1
+ * Version: 1.0.2
  * Author: Kevin Archibald
  * Author URI: http://kevinsspace.ca/
  * License: GPLv2 or later
  *
- * @package   Endorse WordPress Plugin
- * @copyright Copyright (C) 2019 Kevin Archibald
+ * @package   Endorse ClassicPress Plugin
+ * @copyright Copyright (C) 2020 Kevin Archibald
  * @license   GPLv2 or later http://www.gnu.org/licenses/quick-guide-gplv2.html
- * @author    Kevin Archibald <www.kevinsspace.ca/contact/>
+ * @author    Kevin Archibald <https://kevinsspace.ca/contact/>
  * Testimonial Basics is distributed under the terms of the GNU GPL
  */
 

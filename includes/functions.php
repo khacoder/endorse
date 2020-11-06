@@ -3,8 +3,8 @@
  * Endorse Functions
  * This file contains general functions used by Endorse..
  *
- * @package   Endorse WordPress Plugin
- * @copyright Copyright (C) 2019, Kevin Archibald
+ * @package   Endorse ClassicPress Plugin
+ * @copyright Copyright (C) 2020, Kevin Archibald
  * @license   GPLv2 or later http://www.gnu.org/licenses/quick-guide-gplv2.html
  * @author    kevinhaig <kevinsspace.ca/contact/>
  * Endorse is distributed under the terms of the GNU GPL.
@@ -370,8 +370,12 @@ function insert_gravatar( $image_url, $gravatar_size, $use_gravatars, $email ) {
 		$size           = $gravatar_size;
 		$integer        = rand( 1, 6 );// phpcs:ignore
 		$default_avatar = plugin_dir_url( __DIR__ ) . 'images/mystery' . $integer . '.jpg';
-		$avatar_html    = get_avatar( $email, $size, $default_avatar, '', array( 'force_display' => true ) );
-		$html           = '<span class="endorse-avatar" style="width:' . esc_attr( $gravatar_size ) . 'px; height:auto;" >' . $avatar_html . '</span>';
+		if ( false === strpos( $default_avatar, 'localhost' ) ) {
+			$avatar_html = get_avatar( $email, $size, $default_avatar, '', array( 'force_display' => true ) );
+		} else {
+			$avatar_html = get_avatar( $email, $size, '', '', array( 'force_display' => true ) );
+		}
+		$html = '<span class="endorse-avatar" style="width:' . esc_attr( $gravatar_size ) . 'px; height:auto;" >' . $avatar_html . '</span>';
 	}
 	return $html;
 }

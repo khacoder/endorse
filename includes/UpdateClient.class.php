@@ -188,9 +188,9 @@ class UpdateClient {
 		// Only need this JS/CSS on the plugin admin page and updates page.
 		if ($screen->base === 'plugins' || $screen->base === 'plugin-install') {
 			// This will make the jQuery below work with various languages.
-			$text1 = esc_html__( 'Compatible up to:', 'canuck-cp' );
-			$text2 = esc_html__( 'Reviews', 'canuck-cp' );
-			$text3 = esc_html__( 'Read all reviews', 'canuck-cp' );
+			$text1 = esc_html__( 'Compatible up to:', 'endorse' );
+			$text2 = esc_html__( 'Reviews', 'endorse' );
+			$text3 = esc_html__( 'Read all reviews', 'endorse' );
 			// Swap "Compatible up to: 4.9.99" with "Compatible up to: 1.1.1".
 			echo '<script>jQuery(document).ready(function($){$("ul li:contains(4.9.99)").html("<strong>'.$text1.'</strong> '.$this->cp_latest_version.'");$(".fyi h3:contains('.$text2.')").hide();$(".fyi p:contains('.$text3.')").hide();});</script>'."\n";
 			// Styles for the modal window.
@@ -380,7 +380,7 @@ class UpdateClient {
 		// Add the link to the plugin's or theme's row, if not already existing.
 		if ($this->identifier === $component_file) {
 			$anchors_string = implode('', $component_meta);
-			$anchor_text = esc_html__( 'View details', 'canuck-cp' );
+			$anchor_text = esc_html__( 'View details', 'endorse' );
 			if (!preg_match('|(\<a[ \s\S\d]*)('.$anchor_text.')(<\/a>)|', $anchors_string)) {
 				$component_meta[] = '<a class="thickbox" href="'.admin_url('/'.$this->config['type'].'-install.php?tab='.$this->config['type'].'-information&'.$this->config['type'].'='.$this->server_slug.'&TB_iframe=true&width=600&height=550').'">'.$anchor_text.'</a>';
 			}
