@@ -3,7 +3,7 @@
  * Plugin Name: Endorse Input Widget
  * Plugin URI: http://kevinsspace.ca/endorse-plugin/
  * Description: A plugin to input a testimonial.
- * Version: 1.0.2
+ * Version: 1.0.3
  * Author: Kevin Archibald
  * Author URI: http://kevinsspace.ca/
  * License: GPLv2 or later
