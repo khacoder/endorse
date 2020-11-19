@@ -1,6 +1,6 @@
 <?php
 /**
- * Endorse Options
+ * Endorse Shortcodes
  * This file contains the shortcodes for the plugin.
  *
  * @package   Endorse ClassicPress Plugin
@@ -48,6 +48,7 @@ function input_content_form( $atts ) {
 	$auto_approve        = $options['auto_approve'];
 	$use_captcha         = $options['use_recaptcha'];
 	$use_honeypot        = $options['use_honeypot'];
+	$disallow_html       = $options['disallow_html'];
 	// Content input form specific.
 	$author_label          = $options['input_content_author_label'];
 	$email_label           = $options['input_content_email_label'];
@@ -352,6 +353,22 @@ function input_content_form( $atts ) {
 				}
 			}
 			// Validate Testimonial.
+			// Disallowed HTML check.
+			if ( false !== $disallow_html ) {
+				if ( ! empty( $_POST['content_testimonial'] ) ) {
+					$testimonial = wp_kses( wp_unslash( $_POST['content_testimonial'] ), $allowed_html );
+				} else {
+					$testimonial = '';
+				}
+				if ( $testimonial !== wp_strip_all_tags( $testimonial ) || false !== strpos( $testimonial, 'href' )) {// phpcs:ignore
+					// string contains html.
+					if ( false === $disable_popup ) {
+						$content_input_error .= '\n - ' . esc_html__( 'html is not allowed in content', 'endorse' );
+					} else {
+						$content_input_error .= '<br/> - ' . esc_html__( 'html is not allowed in content', 'endorse' );
+					}
+				}
+			}
 			// Check for error before processing to avoid html encoding until all is good.
 			// Premature encoding causes wp_kses to remove smiley images on second pass.
 			if ( '' === $content_input_error ) {
@@ -616,8 +633,10 @@ function input_content_form( $atts ) {
 	// Required text.
 	$input_html .= '<span class="endorse-required-label">' . esc_attr( $required_label ) . '</span>';
 	// HTML allowed.
-	if ( true === $show_html_allowed ) {
-		$input_html .= '<span class="endorse-content-html-allowed">HTML ' . esc_html__( 'Allowed', 'endorse' ) . ': <i>a p br i em strong q h1-h6</i></span>';
+	if ( false !== $disallow_html ) {
+		$input_html .= '<span class="endorse-content-html-allowed">' . esc_html__( 'HTML Not Allowed', 'endorse' );
+	} elseif ( true === $show_html_allowed ) {
+		$input_html .= '<span class="endorse-content-html-allowed">' . esc_html__( 'HTML Allowed', 'endorse' ) . ': <i>a p br i em strong q h1-h6</i></span>';
 	}
 	// Gravatar link.
 	if ( false !== $include_gravatar_link ) {

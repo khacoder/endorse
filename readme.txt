@@ -30,7 +30,7 @@ Endorse is an awesome full featured plugin for managing testimonials on your sit
 
 == Upgrade Notice ==
 * Version 1.0.3
-* 
+* added option to exclude html in testimonial
 
 == Installation ==
 

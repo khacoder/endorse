@@ -85,6 +85,7 @@ function get_option_defaults() {
 		'use_recaptcha'                   => false,
 		'recaptcha_site_key'              => '',
 		'recaptcha_secret_key'            => '',
+		'dissalow_html'                   => false,
 		'include_website'                 => false,
 		'require_website'                 => false,
 		'include_location'                => false,

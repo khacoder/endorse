@@ -17,25 +17,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Add meta box to pages.
- *
- * The format for the add_meta_box() is as follows:
- * add_meta_box( $id, $title, $callback, $post_type, $context, $priority, $callback_args );
- * $id : (string) (required) HTML 'id' attribute of the edit screen section Default: None
- * $title : (string) (required) Title of the edit screen section, visible to user Default: None
- * $callback : (callback) (required) Function that prints out the HTML for the edit screen section.
- *             Pass function name as a string
- * $post_type : (string) (required) The type of Write screen on which to show the edit screen section
- *              ('post', 'page', 'link', or 'custom_post_type' where custom_post_type is the custom post type slug)
- *              Default: None
- * $context : (string) (optional) The part of the page where the edit screen section should be shown
- *            ('normal', 'advanced', or 'side'). (Note that 'side' doesn't exist before 2.7)Default: 'advanced'
- * $priority : (string) (optional) The priority within the context where the boxes should show
- *             ('high', 'core', 'default' or 'low') Default: 'default'
- * $callback_args : (array) (optional) Arguments to pass into your callback function. The callback will receive
- *                  the $post object and whatever parameters are passed through this variable. Default: null
- */
-/**
  * =============================================================================================
  *                     Custom Post Meta Box
  * =============================================================================================

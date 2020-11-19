@@ -167,6 +167,7 @@ class EndorseInputWidget extends \WP_Widget {
 		$widget_rating            = '0.0';
 		$use_captcha              = $options['use_recaptcha'];
 		$use_honeypot             = $options['use_honeypot'];
+		$disallow_html            = $options['disallow_html'];
 		$widget_include_gravatar  = $options['include_gravatar_link'];
 		// before_widget is from register sidebar and is typically hardcoded html, no escaping required.
 		echo $args['before_widget']; //phpcs:ignore
@@ -431,6 +432,23 @@ class EndorseInputWidget extends \WP_Widget {
 					}
 				}
 				// Validate Testimonial.
+				// Validate Testimonial.
+				// Disallowed HTML check.
+				if ( false !== $disallow_html ) {
+					if ( ! empty( $_POST['widget_testimonial'] ) ) {
+						$testimonial = wp_kses( wp_unslash( $_POST['widget_testimonial'] ), $allowed_html );
+					} else {
+						$testimonial = '';
+					}
+					if ( $testimonial !== wp_strip_all_tags( $testimonial ) || false !== strpos( $testimonial, 'href' )) {// phpcs:ignore
+						// string contains html.
+						if ( false === $disable_widget_popup ) {
+							$widget_popup_error .= '\n - ' . esc_html__( 'html is not allowed in content', 'endorse' );
+						} else {
+							$widget_html_error .= '<br/> - ' . esc_html__( 'html is not allowed in content', 'endorse' );
+						}
+					}
+				}
 				// Check for error before processing to avoid html encoding until all is good.
 				// Premature encoding causes wp_kses to remove smiley images on second pass.
 				if ( '' === $widget_html_error && '' === $widget_popup_error ) {
@@ -778,10 +796,14 @@ class EndorseInputWidget extends \WP_Widget {
 				</span>
 				<?php
 			}
-			// HTML Allowed Note.
-			if ( true === $widget_show_html_strip ) {
+			// HTML allowed.
+			if ( false !== $disallow_html ) {
 				?>
-				<span class="endorse-widget-html">HTML <?php esc_html_e( 'Allowed', 'endorse' ); ?>: <i>a p br i em strong q h1-h6</i></span>
+				<span class="endorse-widget-html"><?php esc_html_e( 'HTML Not Allowed', 'endorse' ); ?></span>
+				<?php
+			} elseif ( true === $show_html_allowed ) {
+				?>
+				<span class="endorse-widget-html"><?php esc_html_e( 'HTML Allowed', 'endorse' ); ?>: <i>a p br i em strong q h1-h6</i></span>
 				<?php
 			}
 			?>

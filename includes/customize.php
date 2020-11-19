@@ -334,6 +334,18 @@ function get_customizer_option_partameters() {
 			'transport'    => 'refresh',
 			'sanitize'     => 'sanitize_text_field',
 		),
+		'disallow_html'                   => array(
+			'name'         => 'disallow_html',
+			'title'        => esc_html__( 'Prevent HTML in submitted Content', 'endorse' ),
+			'option_type'  => 'checkbox',
+			'setting_type' => 'option',
+			'description'  => esc_html__( 'Testimonial will not be submitted if it contains HTML. This will prevent spammy submissions.', 'endorse' ),
+			'section'      => 'input_options_general',
+			'priority'     => 6,
+			'default'      => $defaults['disallow_html'],
+			'transport'    => 'refresh',
+			'sanitize'     => 'wp_validate_boolean',
+		),
 		'include_website'                 => array(
 			'name'         => 'include_website',
 			'title'        => esc_html__( 'Include Website Address', 'endorse' ),
