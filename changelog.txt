@@ -2,6 +2,10 @@
                  Endorse ClassicPress Plugin Change Log
 ==========================================================================================
 
+Version 1.0.4
+-----------------------------------
+- improved spam detection for no html option
+
 Version 1.0.3
 -----------------------------------
 * added option to exclude html in testimonial, to reduce spam.

@@ -3,7 +3,7 @@
  * Plugin Name: Endorse
  * Plugin URI: https://kevinsspace.ca/endorse-classicpress-plugin/
  * Description: This plugin provides complete comprehensive management of customer testimonials. The user can set up an input form in a page or in a widget, and display all or selected testimonials in a page or a widget. The plug in is very easy to use and modify.
- * Version: 1.0.3
+ * Version: 1.0.4
  * Author: Kevin Archibald
  * Author URI: https://kevinsspace.ca
  * License: GPLv2 or later
@@ -28,7 +28,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
  * @package   Endorse
- * @version   1.0.3
+ * @version   1.0.4
  * @author    Kevin Archibald <kevin@kevinsspace.ca>
  * @copyright Copyright (C) 2020, Kevin Archibald
  * @link      https://kevinsspace.ca/endorse
@@ -42,7 +42,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die();
 }
 // constants.
-define( 'ENDORSE_VERSION', '1.0.0' );
+define( 'ENDORSE_VERSION', '1.0.4' );
 
 /**
  * Gets this plugin's absolute directory path.
