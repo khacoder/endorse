@@ -360,7 +360,20 @@ function input_content_form( $atts ) {
 				} else {
 					$testimonial = '';
 				}
-				if ( $testimonial !== wp_strip_all_tags( $testimonial ) || false !== strpos( $testimonial, 'href' )) {// phpcs:ignore
+				if ( false !== strpos( $testimonial, '<a' ) ||
+					false !== stripos( $testimonial, '&lt;a' ) ||
+					false !== strpos( $testimonial, '<img' ) ||
+					false !== stripos( $testimonial, '&lt;img' ) ||
+					false !== strpos( $testimonial, 'href=' ) ||
+					false !== strpos( $testimonial, 'src=' ) ||
+					false !== strpos( $testimonial, 'http' ) ||
+					false !== strpos( $testimonial, '//' )
+				) {
+					$found_html = true;
+				} else {
+					$found_html = false;
+				}
+				if ( true === $found_html ) {// phpcs:ignore
 					// string contains html.
 					if ( false === $disable_popup ) {
 						$content_input_error .= '\n - ' . esc_html__( 'html is not allowed in content', 'endorse' );

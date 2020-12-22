@@ -534,12 +534,12 @@ function endorse_import( $file ) {
 		$endorse_meta['custom1']  = sanitize_text_field( $testimonial['custom1'] );
 		$endorse_meta['custom2']  = sanitize_text_field( $testimonial['custom2'] );
 		$post_arr                 = array(
-			'post_type'    => 'khatestimonial',
-			'post_title'   => wp_kses_post( $testimonial['title'] ),
-			'post_content' => wp_kses_post( $testimonial['content'] ),
-			'post_date'    => esc_html( $testimonial['date'] ),
-			'post_status'  => $status,
-			'meta_input'   => array(
+				'post_type'    => 'khatestimonial',
+				'post_title'   => wp_kses_post( $testimonial['title'] ),
+				'post_content' => wp_kses_post( $testimonial['content'] ),
+				'post_date'    => esc_html( $testimonial['date'] ),
+				'post_status'  => $status,
+				'meta_input'   => array(
 				'endorse_meta' => $endorse_meta,
 			),
 		);
