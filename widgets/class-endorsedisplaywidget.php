@@ -3,7 +3,7 @@
  * Plugin Name: Endorse Display Widget
  * Plugin URI: https://kevinsspace.ca/endorse-classicpress-plugin/
  * Description: A plugin to display testimonials in a widget.
- * Version: 1.0.3
+ * Version: 1.0.4
  * Author: Kevin Archibald
  * Author URI: http://kevinsspace.ca/
  * License: GPLv2 or later
